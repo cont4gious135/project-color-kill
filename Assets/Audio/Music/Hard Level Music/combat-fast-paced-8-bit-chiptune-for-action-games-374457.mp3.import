@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cdyukhxetar1t"
+path="res://.godot/imported/combat-fast-paced-8-bit-chiptune-for-action-games-374457.mp3-68ddcbeae19a1d90451654529c8e7bbb.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Hard Level Music/combat-fast-paced-8-bit-chiptune-for-action-games-374457.mp3"
+dest_files=["res://.godot/imported/combat-fast-paced-8-bit-chiptune-for-action-games-374457.mp3-68ddcbeae19a1d90451654529c8e7bbb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

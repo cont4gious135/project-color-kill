@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bgg2tffglxcbj"
+path="res://.godot/imported/game-8-bit-medium-328397.mp3-192b3cdc9d0cfb1ddabfc912bf6d7e1a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Intermediate Level Music/game-8-bit-medium-328397.mp3"
+dest_files=["res://.godot/imported/game-8-bit-medium-328397.mp3-192b3cdc9d0cfb1ddabfc912bf6d7e1a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

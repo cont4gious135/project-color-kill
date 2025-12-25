@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgq2034dllib0"
+path="res://.godot/imported/Damage Taken 3.mp3-eaf72e6c225b8cd68482f09c48071d7a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound effects/Damage Taken 3.mp3"
+dest_files=["res://.godot/imported/Damage Taken 3.mp3-eaf72e6c225b8cd68482f09c48071d7a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

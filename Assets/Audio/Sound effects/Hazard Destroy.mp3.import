@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d2253m8pql6lq"
+path="res://.godot/imported/Hazard Destroy.mp3-6ffa8934f66df2fcf666ac06de810a08.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound effects/Hazard Destroy.mp3"
+dest_files=["res://.godot/imported/Hazard Destroy.mp3-6ffa8934f66df2fcf666ac06de810a08.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

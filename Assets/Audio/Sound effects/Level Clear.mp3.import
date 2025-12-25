@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0rxq3pncfdt1"
+path="res://.godot/imported/Level Clear.mp3-a1101aab875ef8fb8b667aeef79baabf.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound effects/Level Clear.mp3"
+dest_files=["res://.godot/imported/Level Clear.mp3-a1101aab875ef8fb8b667aeef79baabf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
