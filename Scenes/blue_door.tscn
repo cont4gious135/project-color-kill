@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyg4jdf1e1juh"]
+
+[ext_resource type="Texture2D" uid="uid://ceaf0sdel8tml" path="res://Assets/Art/TileMap/CM344 Group Project Tilemap Rev.png" id="1_5enun"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01a5f"]
+atlas = ExtResource("1_5enun")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ossgo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01a5f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rk7yr"]
+radius = 7.9545455
+
+[node name="BlueDoor" type="Area2D"]
+scale = Vector2(2, 2)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ossgo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rk7yr")

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dm8katkuw58pw"]
+
+[ext_resource type="Texture2D" uid="uid://ceaf0sdel8tml" path="res://Assets/Art/TileMap/CM344 Group Project Tilemap Rev.png" id="1_1gk6g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qg77x"]
+atlas = ExtResource("1_1gk6g")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wrbyy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qg77x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lwj4d"]
+radius = 5.1136365
+height = 15.909091
+
+[node name="BlueKey" type="Area2D"]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wrbyy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_lwj4d")
