@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://bd2gmxdqorgnj"]
+[gd_scene load_steps=12 format=3 uid="uid://bd2gmxdqorgnj"]
 
 [ext_resource type="Texture2D" uid="uid://il8gy0stpubx" path="res://Assets/Art/finalized/Red_1.png" id="1_o3vua"]
+[ext_resource type="Script" uid="uid://djeaqi341b2rc" path="res://Scripts/red_enem.gd" id="1_t7hdj"]
 [ext_resource type="Texture2D" uid="uid://dsqgrmcpsdo6s" path="res://Assets/Art/finalized/Red_2.png" id="2_t7hdj"]
 [ext_resource type="Texture2D" uid="uid://bkghcmoblhxus" path="res://Assets/Art/finalized/red_3.png" id="3_pr37e"]
 [ext_resource type="Texture2D" uid="uid://b62rgs8ob05qc" path="res://Assets/Art/finalized/Red_4.png" id="4_l5pa6"]
@@ -45,6 +46,7 @@ animations = [{
 radius = 8.0
 
 [node name="RedEnem" type="Area2D"]
+script = ExtResource("1_t7hdj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8dl3c")

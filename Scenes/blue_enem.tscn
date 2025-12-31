@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cxy4fosc1ap6u"]
+[gd_scene load_steps=12 format=3 uid="uid://cxy4fosc1ap6u"]
 
 [ext_resource type="Texture2D" uid="uid://cscctyw22253m" path="res://Assets/Art/finalized/Blue_1.png" id="1_78lwd"]
+[ext_resource type="Script" uid="uid://dky4jhdkq5wow" path="res://Scripts/blue_enem.gd" id="1_s8quv"]
 [ext_resource type="Texture2D" uid="uid://e120munftucp" path="res://Assets/Art/finalized/Blue_2.png" id="2_s8quv"]
 [ext_resource type="Texture2D" uid="uid://ubfhd30fvj28" path="res://Assets/Art/finalized/Blue_3.png" id="3_0benk"]
 [ext_resource type="Texture2D" uid="uid://byhowyklfmbbo" path="res://Assets/Art/finalized/Blue_4.png" id="4_55v1j"]
@@ -44,11 +45,13 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_mdwlv"]
 radius = 8.0
 
-[node name="BlueEnem" type="Area2D"]
+[node name="BlueEnem" type="Area2D" groups=["blue"]]
+script = ExtResource("1_s8quv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_p4pnq")
-frame_progress = 0.42742544
+frame = 1
+frame_progress = 0.7272169
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_mdwlv")

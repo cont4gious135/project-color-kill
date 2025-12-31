@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://hul0554gntgk"]
+[gd_scene load_steps=12 format=3 uid="uid://hul0554gntgk"]
 
 [ext_resource type="Texture2D" uid="uid://cv4u5sqgg28bd" path="res://Assets/Art/finalized/Yellow_1.png" id="1_5mq0f"]
+[ext_resource type="Script" uid="uid://danspw3btw7m0" path="res://Scenes/yellow_enem.gd" id="1_ue7xr"]
 [ext_resource type="Texture2D" uid="uid://c78thq7d1pagk" path="res://Assets/Art/finalized/Yellow_2.png" id="2_ue7xr"]
 [ext_resource type="Texture2D" uid="uid://b0cjb1m8jiuex" path="res://Assets/Art/finalized/Yellow_3.png" id="3_ubma1"]
 [ext_resource type="Texture2D" uid="uid://cmbnq2box5j5f" path="res://Assets/Art/finalized/Yellow_4.png" id="4_84hyb"]
@@ -45,6 +46,7 @@ animations = [{
 radius = 8.0
 
 [node name="YellowEnem" type="Area2D"]
+script = ExtResource("1_ue7xr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_m0k8b")
