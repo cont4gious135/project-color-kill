@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbp4jne2xqfp2"]
+[gd_scene format=3 uid="uid://bbp4jne2xqfp2"]
 
 [ext_resource type="Script" uid="uid://ckdombi57svqu" path="res://Scenes/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://ceaf0sdel8tml" path="res://Assets/Art/TileMap/CM344 Group Project Tilemap Rev.png" id="1_v0iea"]
@@ -18,12 +18,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=1096840914]
 script = ExtResource("1_cvnsp")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1458885927]
 sprite_frames = SubResource("SpriteFrames_6t5aa")
 
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+[node name="PlayerCollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=1357413773]
 position = Vector2(-0.5, 0.5)
 polygon = PackedVector2Array(0.5, -8.5, 3.5, -3.5, 8.5, -0.5, 3.5, 2.5, 0.5, 7.5, -2.5, 2.5, -7.5, -0.5, -2.5, -3.5)

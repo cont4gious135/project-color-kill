@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://bxmdrr78qyu3n"]
 
 [ext_resource type="Texture2D" uid="uid://ceaf0sdel8tml" path="res://Assets/Art/TileMap/CM344 Group Project Tilemap Rev.png" id="1_uurmw"]
+[ext_resource type="Script" uid="uid://c6ltdkg5xm5my" path="res://Scripts/prototype.gd" id="1_x2k0h"]
 [ext_resource type="Texture2D" uid="uid://br8j5n6f8x1x5" path="res://Assets/Art/TileMap/CM 344 Group Project Extra Sprite.png" id="2_dig14"]
 [ext_resource type="Texture2D" uid="uid://u0kwv35egtrv" path="res://Assets/Art/background_merge.png" id="3_7kyyp"]
 [ext_resource type="Texture2D" uid="uid://bragka4uxdxdk" path="res://Assets/Art/main_corner_merge.png" id="4_k3dp0"]
@@ -12,7 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://cxy4fosc1ap6u" path="res://Scenes/blue_enem.tscn" id="10_7dhkk"]
 [ext_resource type="PackedScene" uid="uid://dy2qxef86bgss" path="res://Scenes/yellow_key.tscn" id="10_x2k0h"]
 [ext_resource type="PackedScene" uid="uid://dm8katkuw58pw" path="res://Scenes/blue_key.tscn" id="11_2mp60"]
+[ext_resource type="Script" uid="uid://cxrs4e42osif2" path="res://Scenes/blue_enemies.gd" id="11_40fcm"]
 [ext_resource type="PackedScene" uid="uid://ds78cm5bd8bdj" path="res://Scenes/exit.tscn" id="12_xnjhx"]
+[ext_resource type="Script" uid="uid://dgmb4w5gxg3vi" path="res://Scripts/keys.gd" id="13_2mp60"]
 [ext_resource type="Script" uid="uid://cx3v5aumyt0ye" path="res://Scripts/path_follow_2d.gd" id="14_bsdhg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bsdhg"]
@@ -296,12 +299,13 @@ sources/9 = SubResource("TileSetAtlasSource_7dhkk")
 
 [sub_resource type="Curve2D" id="Curve2D_x2k0h"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 300, 72.727264, 0, 0, 0, 0, 300, 72.727264, 0, 0, 0, 0, 300, 199.99997, 0, 0, 0, 0, 300, 127.272705, 0, 0, 0, 0, 300, 72.727264)
+"points": PackedVector2Array(0, 0, 0, 0, 300, 72.727264, 0, 0, 0, 0, 300, 72.727264, 0, 0, 0, 0, 300, 209.09091, 0, 0, 0, 0, 300, 127.272705, 0, 0, 0, 0, 300, 72.727264)
 }
 point_count = 5
 
 [node name="Prototype" type="Node2D" unique_id=866939385]
 scale = Vector2(1.76, 1.76)
+script = ExtResource("1_x2k0h")
 
 [node name="Background" type="TileMapLayer" parent="." unique_id=417124004]
 z_index = -1
@@ -342,6 +346,7 @@ scale = Vector2(3.52, 3.52)
 [node name="YellowEnemies" type="Node" parent="." unique_id=184693888]
 
 [node name="BlueEnemies" type="Node" parent="." unique_id=1469767221]
+script = ExtResource("11_40fcm")
 
 [node name="Node2D" type="Path2D" parent="BlueEnemies" unique_id=233581126]
 position = Vector2(496, 576)
@@ -349,7 +354,7 @@ scale = Vector2(1.76, 1.76)
 curve = SubResource("Curve2D_x2k0h")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="BlueEnemies/Node2D" unique_id=41863345]
-position = Vector2(300, 72.63793)
+position = Vector2(300, 72.631546)
 rotation = 1.5707964
 rotates = false
 script = ExtResource("14_bsdhg")
@@ -361,6 +366,7 @@ z_index = 1
 [node name="RedEnemies" type="Node" parent="." unique_id=641169913]
 
 [node name="Keys" type="Node" parent="." unique_id=1681019974]
+script = ExtResource("13_2mp60")
 
 [node name="RedKey" parent="Keys" unique_id=1598343755 instance=ExtResource("9_bsdhg")]
 z_index = 2
@@ -376,3 +382,10 @@ scale = Vector2(1.76, 1.76)
 z_index = 2
 position = Vector2(1293.9999, 898)
 scale = Vector2(1.76, 1.76)
+
+[node name="BufferTimer" type="Timer" parent="." unique_id=755500373]
+one_shot = true
+
+[connection signal="body_shape_entered" from="BlueEnemies/Node2D/PathFollow2D/BlueEnem" to="BlueEnemies/Node2D/PathFollow2D/BlueEnem" method="_on_body_shape_entered"]
+[connection signal="death" from="BlueEnemies/Node2D/PathFollow2D/BlueEnem" to="." method="death"]
+[connection signal="timeout" from="BufferTimer" to="." method="_on_buffer_timer_timeout"]
