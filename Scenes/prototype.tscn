@@ -384,6 +384,7 @@ position = Vector2(1293.9999, 898)
 scale = Vector2(1.76, 1.76)
 
 [node name="BufferTimer" type="Timer" parent="." unique_id=755500373]
+process_mode = 3
 one_shot = true
 
 [connection signal="body_shape_entered" from="BlueEnemies/Node2D/PathFollow2D/BlueEnem" to="BlueEnemies/Node2D/PathFollow2D/BlueEnem" method="_on_body_shape_entered"]

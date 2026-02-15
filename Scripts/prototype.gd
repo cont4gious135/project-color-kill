@@ -14,12 +14,7 @@ func death():
 	$BufferTimer.start()
 	get_tree().paused = true
 	$Player/PlayerCollisionShape2D.queue_free()
-	
-	
-	
-
-
-
+# Runs always in Process Mode
 func _on_buffer_timer_timeout() -> void:
 	get_tree().paused = false
 	get_tree().reload_current_scene()
