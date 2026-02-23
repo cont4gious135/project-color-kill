@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cyg4jdf1e1juh" path="res://Scenes/blue_door.tscn" id="6_fixtb"]
 [ext_resource type="PackedScene" uid="uid://dfbbnrp8fppqp" path="res://Scenes/yellow_door.tscn" id="7_xnjhx"]
 [ext_resource type="PackedScene" uid="uid://dom4f3yrootl4" path="res://Scenes/red_door.tscn" id="8_7dhkk"]
+[ext_resource type="Script" uid="uid://8cqag3i41y40" path="res://Scripts/doors.gd" id="8_044ci"]
 [ext_resource type="PackedScene" uid="uid://o82sl5xodmm6" path="res://Scenes/red_key.tscn" id="9_bsdhg"]
 [ext_resource type="PackedScene" uid="uid://cxy4fosc1ap6u" path="res://Scenes/blue_enem.tscn" id="10_7dhkk"]
 [ext_resource type="PackedScene" uid="uid://dy2qxef86bgss" path="res://Scenes/yellow_key.tscn" id="10_x2k0h"]
@@ -327,6 +328,7 @@ visible = false
 position = Vector2(990.9092, 152.27274)
 
 [node name="Doors" type="Node" parent="." unique_id=655617934]
+script = ExtResource("8_044ci")
 
 [node name="BlueDoor" parent="Doors" unique_id=1086180914 instance=ExtResource("6_fixtb")]
 z_index = 2
