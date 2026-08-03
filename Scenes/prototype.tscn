@@ -325,7 +325,7 @@ speed = 125.0
 
 [node name="Exit" parent="." unique_id=447466876 instance=ExtResource("12_xnjhx")]
 visible = false
-position = Vector2(990.9092, 152.27274)
+position = Vector2(990.9091, 236.36365)
 
 [node name="Doors" type="Node" parent="." unique_id=655617934]
 script = ExtResource("8_044ci")
